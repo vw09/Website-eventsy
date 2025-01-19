@@ -8,17 +8,37 @@ body {
 }
 
 /* Navigatiebalk */
+.floating-header {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9); /* Maak de achtergrond donker met een lichte transparantie */
+    border-radius: 50px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.floating-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.8);
 }
 
 nav .logo {
     font-size: 24px;
     font-weight: bold;
-    color: gold;
+    background: linear-gradient(to right, #EBB960 8%, #D28E2E 37%, #FEF3BF 88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 nav ul {
@@ -30,56 +50,167 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #fff;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: gold;
+    color: #EBB960;
 }
 
 /* Hero sectie */
 .hero {
-    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    height: 100vh;
+    text-align: left;
+    padding: 0 10%;
+    gap: 80px; /* Grotere afstand tussen tekst en smartphone */
+}
+
+/* Afbeelding links - grotere weergave */
+.floating-phone {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 8s ease-in-out infinite;
+}
+
+.floating-phone img {
+    width: 100%;
+    max-width: 500px; /* Grotere telefoon mockup */
+    filter: drop-shadow(0 10px 50px rgba(0, 64, 255, 0.5)); /* Blauwe gloed effect */
+    transform: rotate(-5deg); /* Lichte rotatie voor een dynamisch effect */
+    transition: all 0.5s ease;
+}
+
+.floating-phone img:hover {
+    transform: scale(1.05) rotate(0deg);
+}
+
+/* Subtiele zwevende animatie */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(-3deg);
+    }
+}
+
+/* Hero tekst rechts */
+.hero-content {
+    flex: 1;
+    max-width: 600px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: bold;
     margin-bottom: 20px;
+    background: linear-gradient(to right, #0033ff, #2500A5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+.hero p {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* Luxe CTA-button */
 .cta-button {
-    padding: 15px 30px;
-    background: gold;
-    color: #000;
+    padding: 20px 50px;
+    background: linear-gradient(to right, #0E003F, #2500A5);
+    background-size: 300% 100%;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 64, 255, 0.5);
+    font-size: 1.5rem;
+    position: relative;
+    transition: all 0.8s ease-in-out;
 }
 
+/* Hover effect: subtiele en vloeiende kleurtransitie */
 .cta-button:hover {
-    background: #fff;
-    color: #000;
+    background: linear-gradient(to left, #EBB960, #D28E2E, #FEF3BF, #2500A5, #0E003F);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
 }
 
-/* Content secties */
-.content-section {
-    padding: 80px 50px;
-    text-align: center;
+/* Responsive layout */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .floating-phone img {
+        max-width: 400px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
 }
 
-.content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+@media (max-width: 768px) {
+    .floating-phone img {
+        max-width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 15px 40px;
+    }
+
+    .content-section {
+        padding: 40px 20px;
+    }
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .floating-phone img {
+        max-width: 250px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
