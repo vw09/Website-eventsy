@@ -1,53 +1,114 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENTSY</title>
+    <title>EVENTSY - Make event planning simple</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="floating-header">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">about</a></li>
-                <li><a href="#values">values</a></li>
-                <li class="logo"><a href="#">EVENTSY</a></li>
-                <li><a href="#contact">contact</a></li>
-                <li><a href="#safety">safety</a></li>
-            </ul>
-        </nav>
-    </header>
+
+  <header class="floating-header">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#why">What?</a></li>
+            <li><a href="#features">Features</a></li>
+            <li class="logo"><a href="#">EVENTSY</a></li>
+            <li><a href="about.html">About & Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
     <div class="hero">
-        <div class="hero-content">
-            <h1>Jouw evenementen, jouw regels.</h1>
-            <p>Samen maken we het simpel.</p>
-            <a href="#features" class="cta-button">Ontdek meer</a>
+        <div class="hero-content" data-aos="fade-right">
+            <h1>Your events, your rules.</h1>
+            <p>Together, we make it simple.</p>
+            <a href="#features" class="cta-button">Discover More</a>
         </div>
-        <div class="floating-phone">
-            <img src="assets/iphone-mockup.png" alt="iPhone Mockup">
+        <div class="floating-phone" data-aos="fade-left">
+            <img src="assets/eventspage.png" alt="iPhone Mockup">
         </div>
     </div>
 
-    <section id="product" class="content-section">
-        <h2>Waarom EVENTSY?</h2>
-        <p>Een gebruiksvriendelijk platform voor beheerders, leden en gasten.</p>
+    <section id="why" class="content-section">
+        <div class="why-events-container">
+            <div class="why-events-text">
+                <h2 class="section-title">Why Choose EVENTSY?</h2>
+                <p class="section-description">
+                    EVENTSY is the all-in-one event management solution that helps you organize and track 
+                    events effortlessly with an intuitive and modern interface.
+                </p>
+            </div>
+            <div class="why-events-grid">
+                <div class="why-item">
+                    <i class="fas fa-cogs icon"></i>
+                    <h3>Streamlined Workflow</h3>
+                    <p>Manage everything in one place with no hassle.</p>
+                </div>
+                <div class="why-item">
+                    <i class="fas fa-chart-line icon"></i>
+                    <h3>Improved Oversight</h3>
+                    <p>Get real-time insights and track event performance with ease.</p>
+                </div>
+                <div class="why-item">
+                    <i class="fas fa-user-lock icon"></i>
+                    <h3>Seamless Access</h3>
+                    <p>Attendees can join events securely without unnecessary barriers.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="about" class="content-section">
-        <h2>Over Mij</h2>
-        <p>Ik ben [Jouw Naam], een gepassioneerde ontwerper met een focus op gebruiksvriendelijke digitale producten.</p>
+    <section id="features" class="features-section">
+        <div class="features-intro" data-aos="fade-up">
+            <h2 class="gradient-text">Explore EVENTSY Features</h2>
+            <p>Discover how EVENTSY makes event planning effortless and engaging.</p>
+        </div>
+
+        <div class="features-showcase">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/homepage.png" alt="Home Screen">
+                <h3>Event Overview</h3>
+                <p>Plan and manage all your events in a simple and intuitive interface.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="assets/chatpage.png" alt="Chat Screen">
+                <h3>Seamless Communication</h3>
+                <p>Engage with your members through real-time chat and notifications.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                <img src="assets/notificationpage.png" alt="Notifications Screen">
+                <h3>Instant Notifications</h3>
+                <p>Stay informed with real-time updates and event reminders.</p>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="content-section">
-        <h2>Contact</h2>
-        <p>Email: jouwnaam@email.com</p>
-        <a href="jouwportfolio.com" class="cta-button">Bekijk mijn portfolio</a>
+        <div class="content" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Email: yourname@email.com</p>
+            <a href="mailto:yourname@email.com" class="cta-button">Get in touch</a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 EVENTSY. Alle rechten voorbehouden.</p>
+        <p>&copy; 2025 EVENTSY. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+
 </body>
 </html>
