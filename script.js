@@ -30,3 +30,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth < 768) {
+        document.querySelector('.nav-menu').style.display = 'none';
+    } else {
+        document.querySelector('.nav-menu').style.display = 'flex';
+    }
+});
