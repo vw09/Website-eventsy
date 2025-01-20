@@ -3,30 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENTSY - Make event planning simple</title>
+    <title>EVENTSY - Make Event Planning Simple</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<script src="scripts.js"></script>
-
 </head>
 <body>
 
     <header class="minimal-header">
         <nav>
-            <a href="index.html" class="logo">EVENTSY</a>
-            <ul class="nav-menu">
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-            <div class="menu-toggle" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+            <a href="#home" class="logo">EVENTSY</a>
         </nav>
     </header>
 
-    <div class="hero">
+    <div id="home" class="hero">
         <div class="hero-content" data-aos="fade-right">
             <h1>Your events, your rules.</h1>
             <p>Together, we make it simple.</p>
@@ -42,9 +34,10 @@
             <div class="why-events-text">
                 <h2 class="section-title">Why Choose EVENTSY?</h2>
                 <p class="section-description">
-                    EVENTSY is the all-in-one tool that makes planning and organizing events simple and efficient. Whether you’re hosting an intimate gathering or a large-scale event,</p>
+                    EVENTSY is the all-in-one tool that makes planning and organizing events simple and efficient. Whether you’re hosting an intimate gathering or a large-scale event, EVENTSY guides you through every step with an intuitive interface, real-time collaboration, and smart reminders.
+                </p>
                 <p class="section-description">
-                    EVENTSY guides you through every step with an intuitive interface, real-time collaboration, and smart reminders. It helps you stay organized, work seamlessly with your team, and ensure that no detail is overlooked. With its secure and accessible cloud platform, you can access your event information anytime, anywhere, allowing you to focus on what truly matters: creating a successful and memorable event.
+                    With its secure and accessible cloud platform, you can access your event information anytime, anywhere, allowing you to focus on what truly matters: creating a successful and memorable event.
                 </p>
             </div>
         </div>
@@ -77,12 +70,37 @@
         </div>
     </section>
 
+    <section id="aboutme" class="content-section">
+        <div class="about-container" data-aos="fade-up">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hey, I’m Sarah Van Wellen, a Graphic and Digital Media student with a passion for design and technology. In my free time, I sing every week in a choir with my sisters – something I truly enjoy. I also love being creative through drawing, and when I’m not sketching, you can probably find me behind my PC gaming. And yes, I’ll admit it… I have a slight Red Bull addiction and an energy level to match!</p>
+                <p>While organizing events for our choir, I often ran into problems. The tools we used didn’t really fit our needs. Too much scattered information and unclear communication made planning way harder than it needed to be. That’s what inspired me to create EVENTSY, an app that brings everything together in one place – exactly what I was missing.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/about.jpeg" alt="About Me">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>Contact</h2>
+            <p>If you have any questions or feedback, feel free to get in touch!</p>
+        <div class="contact-container" data-aos="fade-up">
+            <ul class="contact-info">
+                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:yourname@email.com">yourname@email.com</a></li>
+                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/yourname" target="_blank">yourname</a></li>
+                <li><i class="fas fa-globe"></i> Portfolio: <a href="https://yourportfolio.com" target="_blank">yourportfolio.com</a></li>
+            </ul>
+            <a href="mailto:yourname@email.com" class="cta-button">Get in touch</a>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2025 EVENTSY. All rights reserved.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="scripts.js"></script>
     <script>
         AOS.init({
             duration: 1000,
@@ -90,6 +108,5 @@
             once: true
         });
     </script>
-
 </body>
 </html>

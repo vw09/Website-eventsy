@@ -287,6 +287,107 @@ nav .logo {
     color: #ccc;
 }
 
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4rem 10%;
+    gap: 3rem;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about-image img {
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Contact sectie */
+.contact-container {
+    text-align: center;
+    padding: 4rem 10%;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 64, 255, 0.5);
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    
+}
+
+#contact h2 {
+    font-size: 3rem;  /* Pas de grootte van de titel aan */
+    color: #EBB960;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.6rem;  /* Pas de grootte van de paragraaf aan */
+    color: #d1d1d1;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    font-size: 1.4rem;
+}
+
+.contact-info li {
+    margin: 15px 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #EBB960;
+}
+
+.contact-info a {
+    color: #EBB960;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Call to Action Button */
+.cta-button {
+    padding: 20px 50px;
+    background: linear-gradient(to bottom, #0E003F, #2500A5);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0, 64, 255, 0.5);
+    font-size: 1.5rem;
+    transition: all 0.8s ease-in-out;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to left, #EBB960, #D28E2E, #FEF3BF);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
 
 /* Footer */
 footer {
