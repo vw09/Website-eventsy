@@ -7,49 +7,72 @@ body {
     color: #fff;
 }
 
-/* Navigatiebalk */
-.floating-header {
+.minimal-header {
     position: fixed;
-    top: 50px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.9);
     border-radius: 50px;
-    padding: 5px 50px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     backdrop-filter: blur(10px);
+    width: auto;
+    max-width: 400px;
+    transition: all 0.3s ease-in-out;
 }
 
 nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
 }
 
+/* Logo stijl */
 nav .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     background: linear-gradient(to right, #EBB960, #D28E2E, #FEF3BF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
-nav ul {
+/* Navigatie links */
+.nav-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
-nav ul li a {
+.nav-menu a {
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
+.nav-menu a:hover {
     color: #EBB960;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Scroll effect */
+.scroll-header {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 10px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
 /* Hero sectie */
@@ -69,10 +92,10 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: bold;
     margin-bottom: 20px;
-    background: linear-gradient(to right, #0033ff, #2500A5);
+    background: linear-gradient(135deg, #0033ff, #2500A5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -85,7 +108,7 @@ nav ul li a:hover {
 /* CTA-button */
 .cta-button {
     padding: 20px 50px;
-    background: linear-gradient(to right, #0E003F, #2500A5);
+    background: linear-gradient(135deg, #0E003F, #2500A5);
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -128,57 +151,69 @@ nav ul li a:hover {
     }
 }
 
-/* Waarom EVENTSY sectie */
+/* Algemene sectiestijlen */
 .content-section {
-    padding: 100px 10%;
+    padding: 80px 10%;
     text-align: center;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Titel stijl */
 .section-title {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 700;
-    color: #EBB960;
+    background: linear-gradient(90deg, #EBB960, #D28E2E, #FEF3BF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
+/* Beschrijving stijl */
 .section-description {
-    font-size: 1.6rem;
-    color: #ccc;
-    max-width: 800px;
-    margin: 0 auto 50px auto;
+    font-size: 1.5rem;
+    color: #d1d1d1;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
 }
 
-.why-events-grid {
+/* Waarom EVENTSY grid layout */
+.why-events-container {
     display: flex;
-    justify-content: center;
-    gap: 50px;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 .why-item {
-    flex: 1 1 300px;
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    transition: all 0.3s ease-in-out;
-    background: rgba(0, 0, 0, 0.3);
+    flex: 1 1 350px;
+    padding: 50px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #0E003F, #2500A5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
+    text-align: center;
 }
 
 .why-item:hover {
     transform: translateY(-10px);
-    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 40px rgba(0, 64, 255, 0.5);
 }
 
 .why-item .icon {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #EBB960;
     margin-bottom: 20px;
 }
 
 .why-item h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #FEF3BF;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .why-item p {
@@ -188,8 +223,10 @@ nav ul li a:hover {
 
 /* Features sectie */
 .features-section {
-    padding: 80px 5%;
+    padding: 100px 5%;
     text-align: center;
+    background: linear-gradient(135deg, #0E003F, #2500A5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .features-intro h2 {
@@ -198,40 +235,51 @@ nav ul li a:hover {
     background: linear-gradient(to right, #EBB960, #D28E2E);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .features-intro p {
     font-size: 1.6rem;
     color: #bbb;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 50px auto;
 }
 
+/* Showcase stijl */
 .features-showcase {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
 }
 
 .feature-card {
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 20px;
     background: rgba(0, 0, 0, 0.3);
-    max-width: 400px;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(0, 64, 255, 0.5);
 }
 
 .feature-card img {
     max-width: 100%;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
 .feature-card h3 {
     font-size: 2rem;
     color: #EBB960;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .feature-card p {
@@ -240,16 +288,52 @@ nav ul li a:hover {
 }
 
 /* Contact sectie */
+#contact .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#contact .content h2 {
+    font-size: 2.8rem;
+    color: #EBB960;
+    margin-bottom: 20px;
+}
+
 #contact .content p {
-    margin-bottom: 50px;
+    font-size: 1.6rem;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+#contact .cta-button {
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    background: linear-gradient(to right, #EBB960, #D28E2E);
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact .cta-button:hover {
+    background: linear-gradient(to right, #FEF3BF, #D28E2E);
+    color: #000;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background: #111;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: #bbb;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Design */
